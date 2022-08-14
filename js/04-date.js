@@ -9,7 +9,7 @@ const date1 = Date.now();
 console.log('date1', date1);
 
 setTimeout(() => {
-const date2 = new Date().getTime();
+const date2 = Date.now();
 
 console.log('date1', date1);
 console.log('date2', date2);
