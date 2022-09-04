@@ -1,7 +1,7 @@
 const refs = {
   startBtn: document.querySelector("button[data-action-start]"),
   stopBtn: document.querySelector("button[data-action-stop]"),
-  clockface: document.querySelector(".js-clockface"),
+
 };
 
 class Timer {
@@ -65,3 +65,81 @@ refs.stopBtn.addEventListener("click", timer.stop.bind(timer));
 function updateClockface({ hours, mins, secs }) {
   refs.clockface.textContent = `${hours}: ${mins}: ${secs}`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+// import flatpickr from "flatpickr";
+// import "flatpickr/dist/flatpickr.min.css";
+
+// refs = {
+//     startBtn: document.querySelector('button[data-start]'),
+//     clockfaceDays: document.querySelector('[data-days]'),
+//     clockfaceHours: document.querySelector('[data-hours]'),
+//     clockfaceMinutes: document.querySelector('[data-minutes]'),
+//     clockfaceSeconds: document.querySelector('[data-seconds]'),
+//     flatpickrSelect: document.querySelector('input[type="text"]'),
+//   }
+
+// let choseDate = [];
+// const currentDate = new Date();
+
+// refs.startBtn.setAttribute('disabled', true);
+
+// const options = {
+//     enableTime: true,
+//     time_24hr: true,
+//     defaultDate: new Date(),
+//     minuteIncrement: 1,
+//     onClose(selectedDates) {
+//       if (selectedDates[0] < currentDate) {
+//         window.alert('Please choose a date in the future');
+//       }
+//       choseDate = selectedDates[0];
+//       refs.startBtn.removeAttribute('disabled', true);
+//       refs.startBtn.addEventListener('click', countDelta);
+//     },
+//   };
+
+// flatpickr(refs.flatpickrSelect, options);
+
+
+// function countDelta() {
+//     const deltatime = choseDate - currentDate;
+
+//     setInterval(convertMs(deltatime), 1000)
+// }
+
+
+//    function convertMs(ms) {
+//         // Number of milliseconds per unit of time
+//         const second = 1000;
+//         const minute = second * 60;
+//         const hour = minute * 60;
+//         const day = hour * 24;
+      
+//         // Remaining days
+//         const days = pad.Math.floor(ms / day);
+//         // Remaining hours
+//         const hours = pad.Math.floor((ms % day) / hour);
+//         // Remaining minutes
+//         const minutes = pad.Math.floor(((ms % day) % hour) / minute);
+//         // Remaining seconds
+//         const seconds = pad.Math.floor((((ms % day) % hour) % minute) / second);
+      
+//         return { days, hours, minutes, seconds };
+//       }
+
+//     // Добавляет к часам минутам и секундам нолик
+//     function pad(value) {
+//       return String(value).padStart(2, "0");
+//     }
+
